@@ -1,3 +1,4 @@
+import { LoginGuard } from './../../guards/login.guard';
 import { IProductModel } from './../../models/productModel';
 import { HomeService } from './../../services/home.service';
 import { Component } from '@angular/core';
@@ -19,4 +20,13 @@ export class HomeComponent {
 
   this.homeService.getProducts().subscribe(data=> this.product=data)
  }
+
+ cardClick(){
+  alert("Lütfen Giriş Yapınız !")
+ }
+ logOut(){
+  localStorage.clear();
+  alert("Çıkış Yapıldı")
+ }
+
 }

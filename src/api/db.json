@@ -571,42 +571,6 @@
       "password": "123",
       "expiration": "lololololo",
       "token": "EMROMKEMROMKEMROM44K44"
-    },
-    {
-      "email": "emir@.com",
-      "name": "Emircan Omak",
-      "lastName": "asdfa",
-      "fullName": "afaşf",
-      "password": "123",
-      "token": "dshajkfhjasjhfksajk",
-      "id": 3
-    },
-    {
-      "email": "ee@gmail.com",
-      "name": "Enes",
-      "lastName": "Malik",
-      "fullName": "",
-      "password": "321",
-      "token": "dshajkfhjasjhfksajk",
-      "id": 4
-    },
-    {
-      "email": "emir@.com",
-      "name": "asd",
-      "lastName": "asd",
-      "fullName": "",
-      "password": "123",
-      "token": "dshajkfhjasjhfksajk",
-      "id": 5
-    },
-    {
-      "email": "emir@.com",
-      "name": "",
-      "lastName": "",
-      "fullName": "",
-      "password": "123",
-      "token": "dshajkfhjasjhfksajk",
-      "id": 6
     }
   ]
 }

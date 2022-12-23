@@ -1,3 +1,4 @@
+import { CustomerComponent } from './pages/customer/customer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -10,10 +11,12 @@ const routes: Routes = [
   {path:"home-register",component:RegisterComponent},
 
   //child of Home
-  {path:"",component:HomeComponent}
+  {path:"",component:HomeComponent},
 
   // end child of Home
 
+  //child of customer
+  {path:"customer",component:CustomerComponent}
 
 ];
 

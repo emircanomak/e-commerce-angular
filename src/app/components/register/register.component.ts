@@ -20,7 +20,6 @@ export class RegisterComponent {
       email:["",Validators.required],
       name:["",Validators.required],
       lastName:["", Validators.required],
-      fullName:["", Validators.required],
       password:["", Validators.required],
       token:["dshajkfhjasjhfksajk"],
     })

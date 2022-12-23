@@ -40,6 +40,9 @@
         <li class="nav-item " style="width: 120px;">
           <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-white" routerLink="/home-login">Giriş Yap</i>
         </li>
+        <li class="nav-item " style="width: 120px;">
+          <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-white" (click)="logOut()" routerLink="/home-login">Çıkış Yap</i>
+        </li>
 
       </ul>
 
@@ -271,7 +274,7 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
           </div>
-          <button class="btn btn-primary mt-2">Alışverişe Başla</button>
+          <button class="btn btn-primary mt-2" (click)="cardClick()" routerLink="/home-login">Sepete Ekle </button>
         </div>
       </div>
     </div>
@@ -288,7 +291,7 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
           </div>
-          <button class="btn btn-primary mt-2">Alışverişe Başla</button>
+          <button class="btn btn-primary mt-2" (click)="cardClick()" routerLink="/home-login">Sepete Ekle </button>
         </div>
       </div>
     </div>
@@ -304,7 +307,7 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
           </div>
-          <button class="btn btn-primary mt-2">Alışverişe Başla</button>
+          <button class="btn btn-primary mt-2" (click)="cardClick()" routerLink="/home-login">Sepete Ekle </button>
         </div>
       </div>
     </div>
@@ -320,7 +323,7 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
           </div>
-          <button class="btn btn-primary mt-2">Alışverişe Başla</button>
+          <button class="btn btn-primary mt-2" (click)="cardClick()" routerLink="/home-login">Sepete Ekle </button>
         </div>
       </div>
     </div>
@@ -336,7 +339,7 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
           </div>
-          <button class="btn btn-primary mt-2">Alışverişe Başla</button>
+          <button class="btn btn-primary mt-2" (click)="cardClick()" routerLink="/home-login">Sepete Ekle </button>
         </div>
       </div>
     </div>
@@ -353,13 +356,13 @@
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
           </div>
-          <button class="btn btn-primary mt-2">Alışverişe Başla</button>
+          <button class="btn btn-primary mt-2" (click)="cardClick()" routerLink="/home-login">Sepete Ekle </button>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!---Şuanda Popüler end-->>
+<!---Şuanda Popüler end-->
 
       <!-- footer Start-->
       <footer class="footer mt-5 bg-gradient-dark">
