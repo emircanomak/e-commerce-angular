@@ -13,7 +13,9 @@ export class CustomerComponent {
   product:IProductModel[]=[]
   constructor(private customerService:CustomerService, private httpClient:HttpClient ){}
 
-  ngOnInit(){}
+  ngOnInit(){
+    this.getProducts();
+  }
 
   getProducts(){
     return this.customerService.getProducts().subscribe(data=>this.product=data)
