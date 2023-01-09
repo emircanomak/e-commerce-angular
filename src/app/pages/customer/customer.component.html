@@ -55,8 +55,8 @@
       <!-- Right elements -->
       <div class="d-flex align-items-center">
         <!-- Icon -->
-        <a class="link-secondary me-3" href="#">
-          <i class="fas fa-shopping-cart"></i>
+        <a class="link-secondary me-3" >
+          <i class="fas fa-shopping-cart" routerLink="/cart"></i>
         </a>
   
         <!-- Notifications -->
@@ -157,10 +157,10 @@
   <div class="row">
       <div class="col-4"*ngFor="let products of product">
         <div class="card mt-5"> 
-          <img src="{{products.thumbnail}}" class="card-img-top" alt="..." >
+          <img src="{{products.thumbnail}}" class="card-img-top x" alt="..." >
           <div class="card-body">
-            <h5 class="card-title">Samsung Curved Smart Tv</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title">{{products.brand}}</h5>
+            <p class="card-text">{{products.title}}</p>
             <div class="ms-auto text-warning">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
@@ -168,7 +168,7 @@
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
             </div>
-            <button class="btn mt-2">Sepete Ekle </button>
+            <button class="btn mt-2" (click)="addToCart(products)">Sepete Ekle </button>
           </div>
         </div>
       </div>

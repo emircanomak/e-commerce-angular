@@ -1,3 +1,4 @@
+import { CartComponent } from './components/cart/cart.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
   // end child of Home
 
   //child of customer
-  {path:"customer",component:CustomerComponent}
+  {path:"customer",component:CustomerComponent},
+  {path:"cart",component:CartComponent}
 
 ];
 

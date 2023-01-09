@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Ürün</th>
+            <th scope="col">Miktar</th>
+            <th scope="col">Fiyat</th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of cart">
+            <td>{{item.title}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.stock}}</td>
+            <button>Sil</button>
+        </tr>
+        <td>Toplam Tutar :</td>
+    </tbody>
+</table>
