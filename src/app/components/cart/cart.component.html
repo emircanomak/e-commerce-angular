@@ -1,4 +1,4 @@
-<table class="table">
+<!-- <table class="table">
     <thead>
         <tr>
             <th scope="col">Ürün</th>
@@ -18,4 +18,32 @@
         </tr>
         <td>Toplam Tutar :</td>
     </tbody>
-</table>
+</table> -->
+<div class="card mb-3 mt-5 col-md-9" style="max-width: 540px; margin-left: 20rem;"*ngFor="let carts of cart">
+    <div class="row g-0" >
+      <div class="col-md-4" >
+        <img src="{{carts.thumbnail}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"> {{carts.brand}} </h5>
+          <h5>{{carts.title}}</h5>
+          <p class="card-text">{{carts.description}}</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container col-md-3 mt-5 " style="margin-right: 20rem;">
+  <div class="row">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</div>
+  </div>
+    
