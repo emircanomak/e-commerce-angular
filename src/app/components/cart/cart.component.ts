@@ -18,4 +18,5 @@ export class CartComponent {
   getCart(){
     this.store.select("cartReducer").subscribe((state)=>(this.cart = state))
   }
+ 
 }

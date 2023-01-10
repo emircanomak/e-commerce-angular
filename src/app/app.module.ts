@@ -17,6 +17,7 @@ import { CustomerComponent } from './pages/customer/customer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { cartReducer } from 'src/store/reducers/cart-reducer';
+import { CartFooterComponent } from './layouts/cart-footer/cart-footer.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { cartReducer } from 'src/store/reducers/cart-reducer';
     RegisterComponent,
     LoginComponent,
     CustomerComponent,
-    CartComponent
+    CartComponent,
+    CartFooterComponent
     
   ],
   imports: [

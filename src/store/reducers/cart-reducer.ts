@@ -1,7 +1,10 @@
+
 import { CartActions, CartActionTypes } from './../actions/cart-action';
 import { IProductModel } from './../../app/models/productModel';
 
 export let initialState : IProductModel[]=[]
+
+export let totalPrice : number=0
 
 export function cartReducer(state=initialState, action:CartActions){
 
@@ -14,6 +17,9 @@ export function cartReducer(state=initialState, action:CartActions){
 
                 case CartActionTypes.CLEAR_CART:
                     return state.filter(p=>p.id!==action.payload.id);
+
+                    case CartActionTypes.TOTAL_PRICE:
+                        return state.filter(p=>p.price+=totalPrice)
 
             default:
                 return state

@@ -5,7 +5,8 @@ export enum CartActionTypes{
 
     ADD_PRODUCT = "ADD_PRODUCT",
     REMOVE_PRODUCT = "REMOVE_PRODUCT",
-    CLEAR_CART = "CLEAR_CART"
+    CLEAR_CART = "CLEAR_CART",
+    TOTAL_PRICE = "TOTAL_PRICE"
 }
 
 export class AddProduct implements Action {
@@ -15,7 +16,7 @@ export class AddProduct implements Action {
     constructor(public payload:IProductModel){}
 
 }
-
+ 
 export class RemoveProduct implements Action {
 
     type: string = CartActionTypes.REMOVE_PRODUCT;
@@ -30,4 +31,11 @@ export class ClearProduct implements Action {
  constructor(public payload:IProductModel){}
 }
 
-export type CartActions = AddProduct | RemoveProduct | ClearProduct;
+export class TotalPrice implements Action {
+
+    type: string = CartActionTypes.TOTAL_PRICE;
+
+    constructor(public payload:IProductModel){}
+}
+
+export type CartActions = AddProduct | RemoveProduct | ClearProduct | TotalPrice;

@@ -1,24 +1,91 @@
-<!-- <table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Ürün</th>
-            <th scope="col">Miktar</th>
-            <th scope="col">Fiyat</th>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
 
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" routerLink="/customer">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+          height="15"
+          alt="MDB Logo"
+          loading="lazy"
+        />
+      </a>
 
-        </tr>
-    </thead>
+     <form class="d-flex align-items-center w-50 form-search" style="margin-left: 400px; " >
+      <div class="input-group">
+        <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+      </div>
+      <a href="#!" class="text-white"></a>
+    </form>
 
-    <tbody>
-        <tr *ngFor="let item of cart">
-            <td>{{item.title}}</td>
-            <td>{{item.price}}</td>
-            <td>{{item.stock}}</td>
-            <button>Sil</button>
-        </tr>
-        <td>Toplam Tutar :</td>
-    </tbody>
-</table> -->
+      <!-- Left links -->
+    </div>
+    
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+   
+
+      <!-- Notifications -->
+    
+      <!-- Avatar -->
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<hr style="color: rgb(160, 159, 159);">
+
+<h3 class="mt-5" style="margin-left: 20rem;">Sepetim</h3>
 <div class="card mb-3 mt-5 col-md-9" style="max-width: 540px; margin-left: 20rem;"*ngFor="let carts of cart">
     <div class="row g-0" >
       <div class="col-md-4" >
@@ -29,7 +96,8 @@
           <h5 class="card-title"> {{carts.brand}} </h5>
           <h5>{{carts.title}}</h5>
           <p class="card-text">{{carts.description}}</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+         <h5>{{carts.price}}$</h5>
+ 
         </div>
       </div>
     </div>
@@ -46,4 +114,7 @@
       </div>
 </div>
   </div>
-    
+  
+    <!---Footer-->
+  <app-cart-footer></app-cart-footer>
+  <!---Footer-->
