@@ -39,10 +39,10 @@
             <a class="nav-link" href="#">Projects</a>
           </li>
           
-       <form class="d-flex align-items-center w-100 form-search" style="margin-left: 400px; width: 200px;" >
+       <form class="d-flex align-items-center form-search mt-1" style="margin-left: 200px; width: 1000px ;" >
         <div class="input-group">
 
-          <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+          <input type="search" class="form-control" placeholder="Ara.." aria-label="Search"  [(ngModel)]="filterText" [ngModelOptions]="{standalone:true}"/>
         </div>
         <a href="#!" class="text-white"></a>
       </form>
@@ -131,13 +131,12 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-4"*ngFor="let products of product">
+      <div class="col-4"*ngFor="let products of product |customerPipe:filterText">
         <div class="card mt-5"> 
           <img src="{{products.thumbnail}}" class="card-img-top x" alt="..." >
           <div class="card-body">
             <h5 class="card-title">{{products.brand}}</h5>
             <p class="card-text">{{products.title}}</p>
-            <h5>{{products.price}}$</h5>
             <div class="ms-auto text-warning">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>

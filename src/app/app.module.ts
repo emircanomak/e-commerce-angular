@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './components/cart/cart.component';
 import { cartReducer } from 'src/store/reducers/cart-reducer';
 import { CartFooterComponent } from './layouts/cart-footer/cart-footer.component';
+import { CustomerPipe } from './pipes/customer.pipe';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CartFooterComponent } from './layouts/cart-footer/cart-footer.component
     LoginComponent,
     CustomerComponent,
     CartComponent,
-    CartFooterComponent
+    CartFooterComponent,
+    CustomerPipe
     
   ],
   imports: [

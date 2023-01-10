@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent {
+  filterText;
   product:IProductModel[]=[]
   constructor(private customerService:CustomerService, private activatedRoute:ActivatedRoute, private store:Store<any>){}
 
