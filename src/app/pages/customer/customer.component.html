@@ -38,6 +38,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Projects</a>
           </li>
+            <li class="nav-item " style="width: 120px;">
+          <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-dark" (click)="logOut()" routerLink="/home-login">Çıkış Yap</i>
+        </li>
           
        <form class="d-flex align-items-center form-search mt-1" style="margin-left: 200px; width: 1000px ;" >
         <div class="input-group">
@@ -56,70 +59,8 @@
       <div class="d-flex align-items-center">
         <!-- Icon -->
         <a class="link-secondary me-3" >
-          <i class="fas fa-shopping-cart" routerLink="/cart"></i>
+          <i class="fas fa-shopping-cart text-danger" routerLink="/cart"></i>
         </a>
-  
-        <!-- Notifications -->
-        <div class="dropdown">
-          <a
-            class="link-secondary me-3 dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bell"></i>
-            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">Some news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Another news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Avatar -->
-        <div class="dropdown">
-          <a
-            class="dropdown-toggle d-flex align-items-center hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuAvatar"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-              class="rounded-circle"
-              height="25"
-              alt="Black and White Portrait of a Man"
-              loading="lazy"
-            />
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuAvatar"
-          >
-            <li>
-              <a class="dropdown-item" href="#">My profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Settings</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Logout</a>
-            </li>
-          </ul>
-        </div>
       </div>
       <!-- Right elements -->
     </div>

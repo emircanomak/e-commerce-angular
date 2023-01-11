@@ -27,5 +27,9 @@ export class CustomerComponent {
     this.store.dispatch(new AddProduct(products))
     alert("Sepete Eklendi")
   }
+  logOut(){
+    localStorage.clear();
+    alert("Çıkış Yapıldı")
+   }
 
 }

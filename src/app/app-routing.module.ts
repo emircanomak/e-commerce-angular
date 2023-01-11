@@ -1,3 +1,4 @@
+import { LoginGuard } from './guards/login.guard';
 import { CartComponent } from './components/cart/cart.component';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -17,7 +18,7 @@ const routes: Routes = [
   // end child of Home
 
   //child of customer
-  {path:"customer",component:CustomerComponent},
+  {path:"customer",component:CustomerComponent, canActivate:[LoginGuard]},
   {path:"cart",component:CartComponent}
 
 ];

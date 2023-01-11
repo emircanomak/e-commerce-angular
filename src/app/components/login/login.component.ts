@@ -31,7 +31,7 @@ export class LoginComponent {
         this.tokenModel = data [0]
         localStorage.setItem("token",this.tokenModel.token)
         console.log(data);
-        this.router.navigate([""])
+        this.router.navigate(["customer"])
         
       })
 

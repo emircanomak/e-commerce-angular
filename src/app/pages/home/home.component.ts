@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+filterText;
  product:IProductModel[]=[]
  constructor(private homeService:HomeService){}
 
@@ -24,9 +25,6 @@ export class HomeComponent {
  cardClick(){
   alert("Lütfen Giriş Yapınız !")
  }
- logOut(){
-  localStorage.clear();
-  alert("Çıkış Yapıldı")
- }
+
 
 }
