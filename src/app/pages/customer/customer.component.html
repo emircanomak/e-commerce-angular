@@ -20,8 +20,8 @@
         <!-- Navbar brand -->
         <a class="navbar-brand mt-2 mt-lg-0" href="#">
           <img
-            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-            height="15"
+            src="https://www.pngplay.com/wp-content/uploads/6/E-Commerce-Logo-Transparent-Background.png"
+            height="55"
             alt="MDB Logo"
             loading="lazy"
           />
@@ -38,9 +38,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Projects</a>
           </li>
-            <li class="nav-item " style="width: 120px;">
-          <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-dark" (click)="logOut()" routerLink="/home-login">Çıkış Yap</i>
-        </li>
+        
           
        <form class="d-flex align-items-center form-search mt-1" style="margin-left: 200px; width: 1000px ;" >
         <div class="input-group">
@@ -61,7 +59,10 @@
         <a class="link-secondary me-3" >
           <i class="fas fa-shopping-cart text-danger" routerLink="/cart"></i>
         </a>
+          <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-dark mx-4" (click)="logOut()" routerLink="/home-login"> &nbsp; Çıkış</i>
+     
       </div>
+      
       <!-- Right elements -->
     </div>
     <!-- Container wrapper -->
@@ -74,7 +75,7 @@
   <div class="row">
       <div class="col-4"*ngFor="let products of product |customerPipe:filterText">
         <div class="card mt-5"> 
-          <img src="{{products.thumbnail}}" class="card-img-top x" alt="..." >
+          <img src="{{products.thumbnail}}" class="card-img-top mt-4 x" alt="..." >
           <div class="card-body">
             <h5 class="card-title">{{products.brand}}</h5>
             <p class="card-text">{{products.title}}</p>
