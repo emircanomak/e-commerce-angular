@@ -62,23 +62,25 @@
           <h5>{{carts.title}}</h5>
           <p class="card-text">{{carts.description}}</p>
          <h5>{{carts.price}}$</h5>
+         <button class="btn btn-primary" (click)="deleteProduct(carts)">Sepetten Çıkar</button>
  
         </div>
       </div>
     </div>
   </div>
 
-<div class="container col-md-3 mt-5 " style="margin-right: 20rem;">
+<!-- Total Price -->
+<!-- <div class="container col-md-3 mt-5 " style="margin-right: 20rem;">
   <div class="row">
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
+          <h5 class="card-title">{{totalPrice}}</h5>
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
 </div>
-  </div>
+  </div> -->
   
     <!---Footer-->
   <app-cart-footer></app-cart-footer>

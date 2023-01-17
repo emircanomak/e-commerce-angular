@@ -1,3 +1,4 @@
+import { RemoveProduct, TotalPrice } from './../../../store/actions/cart-action';
 import { Store } from '@ngrx/store';
 import { IProductModel } from './../../models/productModel';
 import { Component } from '@angular/core';
@@ -18,5 +19,11 @@ export class CartComponent {
   getCart(){
     this.store.select("cartReducer").subscribe((state)=>(this.cart = state))
   }
+  deleteProduct(product:IProductModel){
+    this.store.dispatch(new RemoveProduct(product))
+  }
+ totalPrice(product:IProductModel){
+    this.store.dispatch(new TotalPrice(product))
+ }
  
 }
