@@ -1,3 +1,4 @@
+import { totalPrice } from './../../../store/reducers/cart-reducer';
 import { RemoveProduct, TotalPrice } from './../../../store/actions/cart-action';
 import { Store } from '@ngrx/store';
 import { IProductModel } from './../../models/productModel';
@@ -22,8 +23,5 @@ export class CartComponent {
   deleteProduct(product:IProductModel){
     this.store.dispatch(new RemoveProduct(product))
   }
- totalPrice(product:IProductModel){
-    this.store.dispatch(new TotalPrice(product))
- }
- 
+
 }

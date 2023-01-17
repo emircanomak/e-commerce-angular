@@ -19,7 +19,7 @@ export function cartReducer(state=initialState, action:CartActions){
                     return state.filter(p=>p.id!==action.payload.id);
 
                     case CartActionTypes.TOTAL_PRICE:
-                        return state.filter(p=>p.price+=totalPrice)
+                        return state.find(p=>p.price+=totalPrice)
 
             default:
                 return state

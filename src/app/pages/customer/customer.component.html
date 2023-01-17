@@ -1,94 +1,74 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-  
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0">
-          <img
-            src="https://www.pngplay.com/wp-content/uploads/6/E-Commerce-Logo-Transparent-Background.png"
-            height="55"
-            alt="MDB Logo"
-            loading="lazy"
-          />
-        </a>
-        
-        <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ürünler</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Markalar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">E-commerce</a>
-          </li>
-        
-          
-       <form class="d-flex align-items-center form-search mt-1" style="margin-left: 200px; width: 1000px ;" >
-        <div class="input-group">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
 
-          <input type="search" class="form-control" placeholder="Ara.." aria-label="Search"  [(ngModel)]="filterText" [ngModelOptions]="{standalone:true}"/>
-        </div>
-        <a href="#!" class="text-white"></a>
-      </form>
-        </ul>
-        <!-- Left links -->
-      </div>
-      
-      <!-- Collapsible wrapper -->
-  
-      <!-- Right elements -->
-      <div class="d-flex align-items-center">
-        <!-- Icon -->
-        <a class="link-secondary me-3" >
-          <i class="fas fa-shopping-cart text-danger" routerLink="/cart"></i>
-        </a>
-          <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-dark mx-4" (click)="logOut()" routerLink="/home-login"> &nbsp; Çıkış</i>
-     
-      </div>
-      
-      <!-- Right elements -->
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0">
+        <img src="https://www.pngplay.com/wp-content/uploads/6/E-Commerce-Logo-Transparent-Background.png" height="55"
+          alt="MDB Logo" loading="lazy" />
+      </a>
+
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link">Ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" >Markalar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" >E-commerce</a>
+        </li>
+
+        <form class="d-flex align-items-center form-search mt-0" style="margin-left: 100px; width: 1000px ;">
+          <div class="input-group">
+
+            <input type="search" class="form-control" placeholder="Ara.." aria-label="Search" [(ngModel)]="filterText"
+              [ngModelOptions]="{standalone:true}" />
+          </div>
+          <a href="#!" class="text-white"></a>
+        </form>
+      </ul>
+      <!-- Left links -->
     </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
 
+    <!-- Right elements -->
+    <div class="d-flex align-items-center " style="margin-right: 100px;">
+      <!-- Icon -->
+      <a class="link-secondary me-3 ">
+        <i class="fas fa-shopping-cart text-danger" routerLink="/cart">&nbsp;Sepet</i>
+      </a>
+      <i class="bi bi-box-arrow-in-right nav-link d-flex align-items-center text-dark mx-4 " (click)="logOut()"
+        routerLink="">&nbsp;Çıkış</i>
 
+    </div>
+  </div>
+</nav>
+<!-- Navbar -->
 
 <div class="container">
   <div class="row">
-      <div class="col-4"*ngFor="let products of product |customerPipe:filterText">
-        <div class="card mt-5"> 
-          <img src="{{products.thumbnail}}" class="card-img-top mt-4 x" alt="..." >
-          <div class="card-body">
-            <h5 class="card-title">{{products.brand}}</h5>
-            <p class="card-text">{{products.title}}</p>
-            <div class="ms-auto text-warning">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <button class="btn mt-2" (click)="addToCart(products)">Sepete Ekle </button>
+    <div class="col-4" *ngFor="let products of product |customerPipe:filterText">
+      <div class="card mt-5">
+        <img src="{{products.thumbnail}}" class="card-img-top mt-4 x" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{products.brand}}</h5>
+          <p class="card-text">{{products.title}}</p>
+          <h5 class="card-title">{{products.price}}$</h5>
+          <div class="ms-auto text-warning">
+            <i class="fa fa-star">{{products.rating}}</i>
           </div>
+          <button class="btn mt-2" (click)="addToCart(products)">Sepete Ekle </button>
         </div>
       </div>
+    </div>
   </div>
 </div>
